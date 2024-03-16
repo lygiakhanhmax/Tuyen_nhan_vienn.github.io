@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Đăng ký Việc làm</title>
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    p {
+      text-align: center;
+      color: #777;
+    }
+
+    form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    nav {
+    background-color: #444;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+}
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    header img{
+    width: 100px;
+    float:left;
+    height: 100px;
+    margin: 15px; 
+    }
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+  </style>
+</head>
+<body>
+    <header>
+    <img src="th (2).jfif" alt="">
+    <h1>Đăng ký Việc làm</h1>
+    </header>
+    <nav>
+        <a href="index.html">Giới Thiệu</a>
+        <a href="dịch vụ.html">Dịch Vụ</a>
+        <a href="btl2.html">Việc Làm</a>
+        <a href="Đăng Ký.html">Đăng Ký </a>
+    </nav>
+    <p>Điền thông tin của bạn vào biểu mẫu dưới đây để đăng ký việc làm.</p>
+   
+  <form id="jobRegistrationForm" onsubmit="submitForm(event)">
+    <label for="gender">Giới tính:</label>
+    <select id="gender" name="gender">
+      <option value="male">Nam</option>
+      <option value="female">Nữ</option>
+      <option value="other">Khác</option>
+    </select>
+
+    <label for="name">Họ và tên:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Số điện thoại:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="language">Ngoại ngữ:</label>
+    <input type="text" id="language" name="language" required>
+
+    <label for="job">Việc làm:</label>
+    <input type="text" id="job" name="job" required>
+    <button type="submit">Đăng ký</button>
+  </form>
+ 
+  <footer>
+    &copy; 2024 Công Ty TNHH Thiết Kế Công Nghệ Việt. All rights reserved.
+</footer>
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const gender = document.getElementById("gender").value;
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const language = document.getElementById("language").value;
+      alert(`Đã đăng ký:\nGiới tính: ${gender}\nHọ tên: ${name}\nEmail: ${email}\nSố điện thoại: ${phone}\nNgoại ngữ: ${language}`);
+    }
+   
+  </script>
+
+</body>
+</html>
